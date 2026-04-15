@@ -55,7 +55,9 @@ df <- df %>%
 
 
 
-updated_pt_text <- glue('{day(Sys.time())} de {month(Sys.time(), label = TRUE, abbr = FALSE, locale="pt_PT")} de {year(Sys.time())}')
+months_pt <- c("janeiro", "fevereiro", "março", "abril", "maio", "junho",
+               "julho", "agosto", "setembro", "outubro", "novembro", "dezembro")
+updated_pt_text <- glue('{day(Sys.time())} de {months_pt[month(Sys.time())]} de {year(Sys.time())}')
 
 data <- list(
   updated_time = Sys.time(),
